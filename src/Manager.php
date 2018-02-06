@@ -44,6 +44,7 @@ class Manager{
         $counter = 0;
 
         foreach ($this->files->directories($this->app['path.lang']) as $langPath) {
+            $langPath = str_replace(DIRECTORY_SEPARATOR, "/", $langPath);
             $locale = basename($langPath);
             foreach ($this->files->allfiles($langPath) as $file) {
                 $info = pathinfo($file);
