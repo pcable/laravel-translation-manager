@@ -39,6 +39,10 @@ class Translator extends LaravelTranslator {
     protected function notifyMissingKey($key)
     {
         list($namespace, $group, $item) = $this->parseKey($key);
+        if($group && !$item){
+            $item = $group;
+            $group = '_json';
+        }
         if($this->manager && $namespace === '*' && $group && $item ){
             $this->manager->missingKey($namespace, $group, $item);
         }
