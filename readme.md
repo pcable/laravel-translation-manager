@@ -1,3 +1,7 @@
+# pcable branch
+## fixes issue with not adding json based keys automatically.
+
+
 ## Laravel 5 Translation Manager
 
 ### For Laravel 4, please use the [0.1 branch](https://github.com/barryvdh/laravel-translation-manager/tree/0.1)!
